@@ -4,9 +4,9 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 
 i18n
-  .use(HttpApi)
-  .use(LanguageDetector) 
-  .use(initReactI18next) 
+  .use(HttpApi) // Load translations from a backend
+  .use(LanguageDetector) // Detect language from the browser
+  .use(initReactI18next) // Pass i18n instance to react-i18next
   .init({
     fallbackLng: "en", 
     supportedLngs: ["en", "fr"], 

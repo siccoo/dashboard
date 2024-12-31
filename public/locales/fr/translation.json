@@ -9,9 +9,15 @@
     },
     "update": "Mettre à jour",
     "uploadPicture": "Télécharger une nouvelle image",
-    "removePicture": "Supprimer l'image",
+    "removePicture": "Supprimer",
     "fullName": "Nom complet",
     "email": "E-mail",
     "phoneNumber": "Numéro de téléphone"
+  },
+  "header": {
+    "admin": "Administrateur Qataloog"
+  },
+  "sidebar": {
+    "logout": "Se déconnecter"
   }
 }

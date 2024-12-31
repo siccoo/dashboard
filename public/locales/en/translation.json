@@ -9,9 +9,15 @@
     },
     "update": "Update",
     "uploadPicture": "Upload New Picture",
-    "removePicture": "Remove Picture",
+    "removePicture": "Remove",
     "fullName": "Full Name",
     "email": "Email",
     "phoneNumber": "Phone Number"
+  },
+  "header": {
+    "admin": "Qataloog Admin"
+  },
+  "sidebar": {
+    "logout": "Logout"
   }
 }

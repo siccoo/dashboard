@@ -1,10 +1,17 @@
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 const Settings: React.FC = () => {
+  const { t } = useTranslation(); // Access translations
   const [activeTab, setActiveTab] = useState("Profile");
   const [profilePic, setProfilePic] = useState<string | null>(null);
 
-  const tabs = ["Profile", "Password", "Subscriptions", "Publisher Earnings"];
+  const tabs = [
+    t('settings.tabs.profile'),
+    t('settings.tabs.password'),
+    t('settings.tabs.subscriptions'),
+    t('settings.tabs.earnings'),
+  ];
 
   const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -20,7 +27,7 @@ const Settings: React.FC = () => {
   return (
     <div className="p-6 max-w-4xl mx-auto min-h-screen">
       <h1 className="font-lato font-extrabold text-[30px] leading-[48px] text-[#323233] mb-4">
-        Settings
+      {t('settings.title')}
       </h1>
 
       {/* Tabs Navigation */}
@@ -61,7 +68,7 @@ const Settings: React.FC = () => {
                   htmlFor="upload-profile"
                   className="rounded-[48px] px-6 py-3 bg-[#f14119] text-white font-lato font-semibold text-[14px] transition cursor-pointer"
                 >
-                  Upload New Picture
+                  {t('settings.uploadPicture')}
                 </label>
                 <input
                   id="upload-profile"
@@ -83,7 +90,7 @@ const Settings: React.FC = () => {
                       className="inline mr-2"
                     />
                   </span>
-                  Remove
+                  {t('settings.removePicture')}
                 </button>
               </div>
             </div>
@@ -96,7 +103,7 @@ const Settings: React.FC = () => {
                 htmlFor="name"
                 className="font-lato font-bold text-[15px] text-[#323233] mb-2"
               >
-                Full Name
+                {t('settings.fullName')}
               </label>
               <input
                 id="name"
@@ -110,7 +117,7 @@ const Settings: React.FC = () => {
                 htmlFor="email"
                 className="font-lato font-bold text-[15px] text-[#323233] mb-2"
               >
-                Email
+               {t('settings.email')}
               </label>
               <input
                 id="email"
@@ -124,7 +131,7 @@ const Settings: React.FC = () => {
                 htmlFor="phone"
                 className="font-lato font-bold text-[15px] text-[#323233] mb-2"
               >
-                Phone Number
+                {t('settings.phoneNumber')}
               </label>
               <div className="flex items-center border border-[#D0D0D4] focus:ring-[#666666] focus:border-[#666666] rounded-[48px] px-[15px] py-[7px] w-[63%] mb-3">
                 {/* Country Code Selector */}
@@ -150,7 +157,7 @@ const Settings: React.FC = () => {
               type="submit"
               className="w-[30%] rounded-[48px] px-6 py-3 bg-[#f14119] text-white font-lato font-semibold text-[14px] transition cursor-pointer"
             >
-              Update
+              {t('settings.update')}
             </button>
           </form>
         </div>

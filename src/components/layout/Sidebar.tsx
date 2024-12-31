@@ -6,12 +6,14 @@ import { MouseEvent } from "react";
 import { LiaTimesSolid } from "react-icons/lia";
 import SideBarItem from "./SidebarItems";
 import { sidebarData } from "../../data/sidebar-data";
+import { useTranslation } from "react-i18next";
 
 const Sidebar = () => {
   const { navIsOpen } = useSelector((store: RootState) => store.moduleGeneral);
   const dispatch = useDispatch();
 
   const handleLogout = () => {};
+  const { t } = useTranslation();
 
   return (
     <nav
@@ -62,7 +64,7 @@ const Sidebar = () => {
                 className="inline mr-2"
               />
             </span>
-            Logout
+            {t("sidebar.logout")}
           </button>
         </section>
       </div>
