@@ -42,7 +42,7 @@ const SidebarItem = ({ item }: { item: any }) => {
           }
         }}
         className={clsx(
-          "flex gap-2 items-center py-3 px-6 rounded-lg relative overflow-hidden cursor-pointer",
+          "flex gap-2 items-center py-[4px] px-6 rounded-lg relative overflow-hidden cursor-pointer",
           location.pathname === item.link ? "bg-transparent text-black" : "bg-transparent text-gray"
         )}
         onMouseEnter={handleMouseOver}
@@ -64,7 +64,7 @@ const SidebarItem = ({ item }: { item: any }) => {
               to={child.link}
               key={child.id}
               className={clsx(
-                "flex gap-2 items-center py-2 px-6 rounded-lg relative overflow-hidden cursor-pointer",
+                "mt-2 flex gap-2 items-center py-2 px-6 rounded-lg relative overflow-hidden cursor-pointer",
                 location.pathname === child.link ? "bg-white text-black" : "bg-white text-gray"
               )}
               onClick={() => dispatch(toggleNav(false))}

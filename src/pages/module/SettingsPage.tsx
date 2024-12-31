@@ -113,7 +113,7 @@ const Settings: React.FC = () => {
               <label htmlFor="phone" className="font-lato font-bold text-[15px] text-[#323233] mb-2">
                 Phone Number
               </label>
-              <div className="border border-[#D0D0D4] focus:ring-[#666666] focus:border-[#666666] rounded-[48px] px-[15px] py-[7px] w-[63%]">
+              <div className="border border-[#D0D0D4] focus:ring-[#666666] focus:border-[#666666] rounded-[48px] px-[15px] py-[7px] w-[63%] mb-3">
                 <span className="text-gray-500 mr-2">+234</span>
                 <input
                   id="phone"
