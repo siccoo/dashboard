@@ -3,6 +3,7 @@ import { GeneralModuleInitialProps } from "../types/gen-module.interface";
 
 const initialState: GeneralModuleInitialProps = {
   navIsOpen: false,
+  language: "en"
 };
 
 const moduleGeneralSlice = createSlice({
