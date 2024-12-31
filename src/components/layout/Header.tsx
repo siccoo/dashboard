@@ -28,16 +28,16 @@ const Header = () => {
             </div>
           </div>
           <div className="flex-1 hidden sm:flex justify-center"></div>
-          <div className="flex justify-between items-center gap-4 mr-3">
+          <div className="flex justify-between items-center gap-4">
             {/* Center: Language Selector */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 mr-4">
               <img
                 src="/images/svg/ngIcon.svg"
                 alt="Flag"
                 className="w-5 h-5"
               />
               <select
-                className="bg-transparent border-none text-gray-700 cursor-pointer focus:outline-none"
+                className="bg-transparent border-none text-[#323233] cursor-pointer focus:outline-none font-lato font-semibold text-[14px] leading-6"
                 defaultValue="English"
               >
                 <option value="English">English</option>
