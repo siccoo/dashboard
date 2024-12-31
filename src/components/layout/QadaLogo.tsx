@@ -6,7 +6,6 @@ const QadaLogo = () => {
       <img
         src="/images/svg/qatalogo.svg"
         alt="Logo"
-        // className={clsx(logoSize(size as string).imgSize)}
       />
       
     </Link>
