@@ -55,9 +55,9 @@ const Settings: React.FC = () => {
             <div className="">
               <div className="relative">
                 <img
-                  src={profilePic || "./images/SettingsImg.png"}
+                  src={profilePic || "/images/svg/SettingsImg.png"}
                   alt="Profile"
-                  className="w-36 h-36 rounded-full object-cover border-4 border-red-500"
+                  className="w-36 h-36 rounded-full object-cover border-4 "
                 />
               </div>
             </div>
