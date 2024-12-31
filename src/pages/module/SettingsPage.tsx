@@ -24,7 +24,7 @@ const Settings: React.FC = () => {
       </h1>
 
       {/* Tabs Navigation */}
-      <div className="flex space-x-6 border-gray-200 font-lato font-bold text-[15px] text-[#323233] mb-6">
+      <div className="flex space-x-4 border-gray-200 font-lato font-bold text-[15px] text-[#323233] mb-6">
         {tabs.map((tab) => (
           <button
             key={tab}
@@ -42,15 +42,15 @@ const Settings: React.FC = () => {
 
       {/* Conditional Rendering of Tabs */}
       {activeTab === "Profile" && (
-        <div className=" p-6 rounded-lg">
+        <div className="rounded-lg">
           {/* Profile Picture Section */}
-          <div className="flex flex-col xl:flex-row gap-4">
+          <div className="flex flex-col xl:flex-row gap-4 pt-4">
             <div className="">
               <div className="relative">
                 <img
-                  src={profilePic || "./images/SettingsImg.png"}
+                  src={profilePic || "../images/SettingsImg.png"}
                   alt="Profile"
-                  className="w-32 h-32 rounded-full object-cover border-4 border-red-500"
+                  className="w-36 h-36 rounded-full object-cover border-4 border-red-500"
                 />
               </div>
             </div>
@@ -86,34 +86,34 @@ const Settings: React.FC = () => {
           </div>
 
           {/* Form Section */}
-          <form className="mt-6 space-y-4">
+          <form className="mt-4 space-y-3">
             <div className="flex flex-col">
-              <label htmlFor="name" className="text-gray-600">
+              <label htmlFor="name" className="font-lato font-bold text-[15px] text-[#323233] mb-2">
                 Full Name
               </label>
               <input
                 id="name"
                 type="text"
-                defaultValue="John Doe"
-                className="border border-gray-300 p-2 rounded-lg"
+                className="border border-[#D0D0D4] focus:ring-[#666666] focus:border-[#666666] rounded-[48px] px-[15px] py-[7px] w-[63%]"
+                placeholder="John Doe"
               />
             </div>
             <div className="flex flex-col">
-              <label htmlFor="email" className="text-gray-600">
+              <label htmlFor="email" className="font-lato font-bold text-[15px] text-[#323233] mb-2">
                 Email
               </label>
               <input
                 id="email"
                 type="email"
-                defaultValue="Johhd@gmail.com"
-                className="border border-gray-300 p-2 rounded-lg"
+                className="border border-[#D0D0D4] focus:ring-[#666666] focus:border-[#666666] rounded-[48px] px-[15px] py-[7px] w-[63%]"
+                placeholder="Johhd@gmail.com"
               />
             </div>
             <div className="flex flex-col">
-              <label htmlFor="phone" className="text-gray-600">
+              <label htmlFor="phone" className="font-lato font-bold text-[15px] text-[#323233] mb-2">
                 Phone Number
               </label>
-              <div className="flex border border-gray-300 p-2 rounded-lg">
+              <div className="border border-[#D0D0D4] focus:ring-[#666666] focus:border-[#666666] rounded-[48px] px-[15px] py-[7px] w-[63%]">
                 <span className="text-gray-500 mr-2">+234</span>
                 <input
                   id="phone"
@@ -126,7 +126,7 @@ const Settings: React.FC = () => {
             </div>
             <button
               type="submit"
-              className="w-[30%] bg-red-500 text-white py-2 rounded-lg"
+              className="w-[30%] rounded-[48px] px-6 py-3 bg-[#f14119] text-white font-lato font-semibold text-[14px] transition cursor-pointer"
             >
               Update
             </button>

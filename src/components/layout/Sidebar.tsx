@@ -18,7 +18,7 @@ const Sidebar = () => {
     <nav
       className={clsx(
         "w-full h-full fixed top-0 z-10 transition-all bg-base-black/50 laptop:static laptop:h-full laptop:w-[300px]",
-        navIsOpen ? "left-0" : "left-[-5000px]"
+        navIsOpen ? "left-0" : "left-[-50000px]"
       )}
       onClick={() => dispatch(toggleNav(false))}>
       <div
