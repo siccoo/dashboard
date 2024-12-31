@@ -32,31 +32,35 @@ const SidebarItem = ({ item }: { item: any }) => {
 
   return (
     <>
-      <Link
-        to={item.link}
-        onClick={() => {
-          if (item.children) {
-            setIsExpanded(!isExpanded);
-          } else {
-            dispatch(toggleNav(false));
-          }
-        }}
-        className={clsx(
-          "flex gap-2 items-center py-[4px] px-6 rounded-lg relative overflow-hidden cursor-pointer",
-          location.pathname === item.link ? "bg-transparent text-black" : "bg-transparent text-gray"
-        )}
-        onMouseEnter={handleMouseOver}
-        onMouseLeave={handleMouseLeave}
-      >
-        <item.icon />
-        <span>{item.label}</span>
-        {item.children && (
-          <span className="ml-auto">
-            {isExpanded ? <FiChevronDown /> : <FiChevronRight />}
-          </span>
-        )}
-      </Link>
-      
+      <div className="mt-2">
+        <Link
+          to={item.link}
+          onClick={() => {
+            if (item.children) {
+              setIsExpanded(!isExpanded);
+            } else {
+              dispatch(toggleNav(false));
+            }
+          }}
+          className={clsx(
+            "flex gap-2 items-center py-[4px] px-6 rounded-lg relative overflow-hidden cursor-pointer",
+            location.pathname === item.link
+              ? "bg-transparent text-black"
+              : "bg-transparent text-gray"
+          )}
+          onMouseEnter={handleMouseOver}
+          onMouseLeave={handleMouseLeave}
+        >
+          <item.icon />
+          <span>{item.label}</span>
+          {item.children && (
+            <span className="ml-auto">
+              {isExpanded ? <FiChevronDown /> : <FiChevronRight />}
+            </span>
+          )}
+        </Link>
+      </div>
+
       {item.children && isExpanded && (
         <div className="pl-8">
           {item.children.map((child: any) => (
@@ -65,7 +69,9 @@ const SidebarItem = ({ item }: { item: any }) => {
               key={child.id}
               className={clsx(
                 "mt-2 flex gap-2 items-center py-2 px-6 rounded-lg relative overflow-hidden cursor-pointer",
-                location.pathname === child.link ? "bg-white text-black" : "bg-white text-gray"
+                location.pathname === child.link
+                  ? "bg-white text-black"
+                  : "bg-white text-gray"
               )}
               onClick={() => dispatch(toggleNav(false))}
             >

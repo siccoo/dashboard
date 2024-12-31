@@ -56,12 +56,12 @@ const Sidebar = () => {
             className="mt-5 rounded-[48px] px-[42.5px] py-[12px] border border-[#f14119] text-[#f14119] font-lato font-semibold text-[14px]"
           >
             <span>
-                    <img
-                      src="./images/svg/removeIcon.svg"
-                      alt="remove"
-                      className="inline mr-2"
-                    />
-                  </span>
+              <img
+                src="./images/svg/removeIcon.svg"
+                alt="remove"
+                className="inline mr-2"
+              />
+            </span>
             Logout
           </button>
         </section>

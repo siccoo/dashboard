@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "title": "Paramètres",
+    "tabs": {
+      "profile": "Profil",
+      "password": "Mot de passe",
+      "subscriptions": "Abonnements",
+      "earnings": "Gains des éditeurs"
+    },
+    "update": "Mettre à jour",
+    "uploadPicture": "Télécharger une nouvelle image",
+    "removePicture": "Supprimer l'image",
+    "fullName": "Nom complet",
+    "email": "E-mail",
+    "phoneNumber": "Numéro de téléphone"
+  }
+}

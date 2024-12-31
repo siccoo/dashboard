@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "title": "Settings",
+    "tabs": {
+      "profile": "Profile",
+      "password": "Password",
+      "subscriptions": "Subscriptions",
+      "earnings": "Publisher Earnings"
+    },
+    "update": "Update",
+    "uploadPicture": "Upload New Picture",
+    "removePicture": "Remove Picture",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phoneNumber": "Phone Number"
+  }
+}
