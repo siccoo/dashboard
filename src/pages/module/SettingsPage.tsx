@@ -77,7 +77,11 @@ const Settings: React.FC = () => {
                   className="mt-5 rounded-[48px] px-[42.5px] py-[7px] border-2 border-[#f14119] text-[#f14119] font-lato font-semibold text-[14px]"
                 >
                   <span>
-                    <img src="./images/svg/removeIcon.svg" alt="remove" className="inline mr-2" />
+                    <img
+                      src="./images/svg/removeIcon.svg"
+                      alt="remove"
+                      className="inline mr-2"
+                    />
                   </span>
                   Remove
                 </button>
@@ -88,7 +92,10 @@ const Settings: React.FC = () => {
           {/* Form Section */}
           <form className="mt-4 space-y-3">
             <div className="flex flex-col">
-              <label htmlFor="name" className="font-lato font-bold text-[15px] text-[#323233] mb-2">
+              <label
+                htmlFor="name"
+                className="font-lato font-bold text-[15px] text-[#323233] mb-2"
+              >
                 Full Name
               </label>
               <input
@@ -99,7 +106,10 @@ const Settings: React.FC = () => {
               />
             </div>
             <div className="flex flex-col">
-              <label htmlFor="email" className="font-lato font-bold text-[15px] text-[#323233] mb-2">
+              <label
+                htmlFor="email"
+                className="font-lato font-bold text-[15px] text-[#323233] mb-2"
+              >
                 Email
               </label>
               <input
@@ -110,20 +120,32 @@ const Settings: React.FC = () => {
               />
             </div>
             <div className="flex flex-col">
-              <label htmlFor="phone" className="font-lato font-bold text-[15px] text-[#323233] mb-2">
+              <label
+                htmlFor="phone"
+                className="font-lato font-bold text-[15px] text-[#323233] mb-2"
+              >
                 Phone Number
               </label>
-              <div className="border border-[#D0D0D4] focus:ring-[#666666] focus:border-[#666666] rounded-[48px] px-[15px] py-[7px] w-[63%] mb-3">
-                <span className="text-gray-500 mr-2">+234</span>
+              <div className="flex items-center border border-[#D0D0D4] focus:ring-[#666666] focus:border-[#666666] rounded-[48px] px-[15px] py-[7px] w-[63%] mb-3">
+                {/* Country Code Selector */}
+                <select
+                  className="appearance-none bg-transparent text-gray-500 focus:outline-none mr-2"
+                  defaultValue="+234"
+                >
+                  <option value="+234">🇳🇬 +234</option>
+                  <option value="+33">🇫🇷 +33</option>
+                </select>
+
+                {/* Phone Number Input */}
                 <input
                   id="phone"
                   type="tel"
-                  defaultValue=""
                   placeholder="Phone Number"
-                  className="flex-1 outline-none"
+                  className="flex-1 outline-none text-gray-800"
                 />
               </div>
             </div>
+
             <button
               type="submit"
               className="w-[30%] rounded-[48px] px-6 py-3 bg-[#f14119] text-white font-lato font-semibold text-[14px] transition cursor-pointer"
