@@ -3,7 +3,7 @@ import SettingsPage from './module/SettingsPage'
 const Dashboard = () => {
   return (
     <div>
-      <div className="w-[50%] max-w-[1000px] mx-auto">
+      <div className="w-[65%]">
         <SettingsPage />
       </div>
     </div>
